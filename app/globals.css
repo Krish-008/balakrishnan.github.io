@@ -72,8 +72,8 @@ body {
 .glass-container {
   position: relative;
   z-index: 1;
-  width: 95%;
-  height: 95%;
+  width: 98%;
+  height: 98%;
   margin: auto;
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(100px);
@@ -170,7 +170,7 @@ h3 {
   margin: 0;
   line-height: 1.1;
   color: #504f4f;
-  font-family: 'Lucida Handwriting', cursive;
+  font-family: 'Lucida Handwriting';
 }
 
 h4 {
@@ -190,8 +190,22 @@ h2 {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+}
+
 p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   max-width: 65ch;
   color: #1d1c1c;
@@ -225,6 +239,12 @@ p1 {
   color: var(--background);
 }
 
+/* Project Card Styles */
+.project-card {
+  min-height: 180px;
+  max-height: 220px;
+}
+
 /* Project Card Hover Effects */
 .project-card:hover {
   transform: translateY(-5px);
@@ -236,4 +256,295 @@ p1 {
 .project-card:hover .project-icon {
   transform: scale(1.2) !important;
   color: var(--accent);
+}
+
+/* Navbar Icon Styles */
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none !important;
+  background-image: none !important;
+}
+
+.nav-icon:hover {
+  background-size: 0 !important;
+}
+
+.nav-icon svg {
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.nav-icon:hover svg {
+  transform: scale(1.15);
+  fill: #3b82f6;
+}
+
+/* Navbar Tooltip */
+.nav-icon {
+  position: relative;
+}
+
+.nav-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1f2937;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 2000;
+}
+
+.nav-icon:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Navbar Container Hover Effect */
+nav {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+nav:hover {
+  transform: translateX(-50%) scale(1.02);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Skill Icon Hover Effect */
+.skill-icon {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-icon:hover {
+  transform: translateY(-8px) scale(1.1);
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon svg {
+  transition: transform 0.3s ease;
+}
+
+.skill-icon:hover svg {
+  transform: scale(1.1);
+}
+
+/* Advanced Skill Tooltip */
+.skill-icon {
+  position: relative;
+}
+
+.skill-icon::after {
+  content: attr(data-skill);
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1f2937;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.skill-icon:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.skill-category-title {
+  margin-bottom: 1.2rem;
+  font-size: 0.85rem;
+  color: #3b82f6;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  opacity: 0.8;
+}
+
+/* Unfiltered Me Bento Grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 140px;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.bento-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  background-size: cover;
+  background-position: center;
+}
+
+.bento-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.85) 100%);
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+
+.bento-card:hover::before {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.bento-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 0.4rem;
+  z-index: 2;
+  position: relative;
+}
+
+.bento-card p {
+  font-size: 0.8rem;
+  color: #4b5563;
+  margin: 0;
+  z-index: 2;
+  line-height: 1.4;
+  position: relative;
+  font-weight: 500;
+}
+
+.bento-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  opacity: 0.8;
+  z-index: 2;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bento-card:hover .bento-icon {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bento-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.bento-wide {
+  grid-column: span 2;
+}
+
+.bento-tall {
+  grid-row: span 2;
+}
+
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .bento-large,
+  .bento-wide,
+  .bento-tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+/* Responsive Hero Layout */
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 2rem;
+  padding-top: 3.5rem;
+  max-width: 1200px;
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+}
+
+/* Responsive Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 2rem 4rem 2rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 180px);
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem 4rem 1rem;
+  }
+}
+
+/* Responsive Glass Container Padding */
+@media (max-width: 640px) {
+  .glass-container {
+    width: 95%;
+  }
 }

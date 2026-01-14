@@ -53,18 +53,7 @@ export default function Projects() {
             <div className="glass-container">
 
                 <h2 style={{ marginTop: '4rem', marginBottom: '2rem' }}>Projects</h2>
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', // Reduced min width slightly
-                    gridAutoRows: '1fr', // Ensure rows respect content
-                    gap: '2rem', // Increased gap
-                    maxWidth: '1200px',
-                    width: '100%',
-                    padding: '0 2rem 6rem 2rem',
-                    overflowY: 'auto',
-                    maxHeight: 'calc(100vh - 150px)',
-                    alignContent: 'start' // Prevents stretching
-                }}>
+                <div className="projects-grid">
                     {projects.map((project, index) => (
                         <a
                             key={index}
@@ -73,7 +62,6 @@ export default function Projects() {
                             rel="noopener noreferrer"
                             className="project-card"
                             style={{
-                                aspectRatio: '1 / 1', // Force square shape
                                 display: 'flex',
                                 flexDirection: 'column',
                                 textDecoration: 'none',
@@ -83,7 +71,6 @@ export default function Projects() {
                                 overflow: 'hidden',
                                 transition: 'all 0.3s ease',
                                 border: '1px solid rgba(14, 10, 10, 0.1)',
-                                position: 'relative' // For absolute positioning content if needed
                             }}
                         >
                             <div style={{
