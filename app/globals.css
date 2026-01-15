@@ -53,19 +53,19 @@ body {
 }
 
 .bg-hero {
-  background-image: url('/background.jpg');
+  background-image: url('/balakrishnan.github.io/background.jpg');
 }
 
 .bg-about {
-  background-image: url('/about.jpeg');
+  background-image: url('/balakrishnan.github.io/about.jpeg');
 }
 
 .bg-projects {
-  background-image: url('/projects.jpg');
+  background-image: url('/balakrishnan.github.io/projects.jpg');
 }
 
 .bg-unfiltered {
-  background-image: url('/Unfilteredme.jpg');
+  background-image: url('/balakrishnan.github.io/Unfilteredme.jpg');
 }
 
 /* Glass Container (Shared) */
@@ -497,6 +497,7 @@ nav:hover {
     grid-row: span 1;
   }
 }
+
 /* Responsive Hero Layout */
 .hero-content {
   display: flex;
