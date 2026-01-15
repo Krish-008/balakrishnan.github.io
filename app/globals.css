@@ -53,19 +53,19 @@ body {
 }
 
 .bg-hero {
-  background-image: url('/balakrishnan.github.io/background.jpg');
+  background-image: url('/background.jpg');
 }
 
 .bg-about {
-  background-image: url('/balakrishnan.github.io/about.jpeg');
+  background-image: url('/about.jpeg');
 }
 
 .bg-projects {
-  background-image: url('/balakrishnan.github.io/projects.jpg');
+  background-image: url('/projects.jpg');
 }
 
 .bg-unfiltered {
-  background-image: url('/balakrishnan.github.io/Unfilteredme.jpg');
+  background-image: url('/Unfilteredme.jpg');
 }
 
 /* Glass Container (Shared) */

@@ -1,5 +1,4 @@
 import Section from './Section';
-import Image from 'next/image';
 
 const skills = [
     { name: 'Python', icon: <svg viewBox="0 0 24 24" fill="#3776AB"><path d="M14.25.3c.1.34.13.68.12 1.02a3.8 3.8 0 01-3.6 3.6c-.34.02-.68-.01-1.02-.12v.12a5 5 0 004.5 4.5l.12-.12c-.1-.34-.13-.68-.12-1.02a3.8 3.8 0 013.6-3.6c.34-.02.68.01 1.02.12v-.12a5 5 0 00-4.5-4.5zM8.5 4.34a2.25 2.25 0 110 4.5 2.25 2.25 0 010-4.5zm0 .5c.97 0 1.75.78 1.75 1.75S9.47 8.34 8.5 8.34s-1.75-.78-1.75-1.75.78-1.75 1.75-1.75zM15.5 15.16a2.25 2.25 0 110-4.5 2.25 2.25 0 010 4.5zm0-.5c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zM9.75 23.7c-.1-.34-.13-.68-.12-1.02a3.8 3.8 0 013.6-3.6c.34-.02.68.01 1.02.12v-.12a5 5 0 00-4.5-4.5l-.12.12c.1.34.13.68.12 1.02a3.8 3.8 0 01-3.6 3.6c-.34.02-.68-.01-1.02-.12v.12a5 5 0 004.5 4.5z" /></svg> },
@@ -26,14 +25,13 @@ export default function Hero() {
             <div className="glass-container">
                 <div className="hero-content">
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <Image
+                        <img
                             src="/profile.jpeg"
                             alt="Profile"
                             className="profile-photo"
-                            width={350}
-                            height={350}
-                            priority
                             style={{
+                                width: '350px',
+                                height: '350px',
                                 borderRadius: '24px',
                                 marginBottom: '1.5rem',
                                 objectFit: 'cover',

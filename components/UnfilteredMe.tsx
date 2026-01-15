@@ -4,7 +4,7 @@ const interests = [
     {
         title: "Sports",
         description: "My favorite way to escape reality. Forever inspired by the goat, Cristiano Ronaldo.",
-        image: "/balakrishnan.github.io/image.png",
+        image: "/image.png",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
                 <circle cx="12" cy="12" r="10" />
@@ -17,7 +17,7 @@ const interests = [
     {
         title: "The Anime Fan",
         description: "Hardcore fan. I loved the Beyblade era—spinning tops and epic battles.",
-        image: "/balakrishnan.github.io/anime.png",
+        image: "/anime.png",
         icon: (
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5z" />
@@ -42,7 +42,7 @@ const interests = [
     {
         title: "Sit-Coms",
         description: "Phil Dunphy is my spirit animal. Sitcoms keep the mood light!",
-        image: "/balakrishnan.github.io/sitcom.png",
+        image: "/sitcom.png",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
                 <path d="M3 12h18M3 12l9-9 9 9M5 12v9a1 1 0 001 1h12a1 1 0 001-1v-9M9 22V12h6v10" />
